@@ -1,99 +1,62 @@
 * {
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     font-family: sans-serif;
 }
-
-header {
-    display: grid;
-    column-gap: 9px;
-    row-gap: 5px;
-    grid-template-columns: repeat(35, 50px);
-    grid-template-rows: repeat(30, 50px);
-    background-color: rgb(0, 0, 0);
-}
-div.logo {
-    background-color: rgb(255, 255, 255);
-    grid-column: 2/35;
-    grid-row: 1/3;
-}
-div.Google {
-    background-color: rgb(255, 255, 255);
-    grid-column: 1/35;
-    grid-row: 2/3;
-}
-
-div.content {
-    background-color: rgb(0, 0, 0);
-    grid-column: 2/32;
-    grid-row: 4/30;
-}
-
-div.menu {
+#menu {
     position:fixed;
-    width: 300px;
+    width: 250px;
     height: 100%;
-    background-color:white;
-    border-right: 4px black;
+    background-color:rgb(175, 171, 246);
+    border-right: 4px solid grey;
+    left: -254px;
 
 }
-div.menu ul li:first-child {
+
+#menu.active {
+    left: 0px;
+}
+#menu ul li:first-child {
     text-align: center;
     color: rgb(248, 126, 126);
     font-size: 1.95em;
     list-style: none;
     padding: 25px 10px 10px 10px;
 }
-div.menu ul li:not(first-child) {
+#menu ul li:not(:first-child) {
     width: 90%;
     margin-left: 10%;
     font-size: 1.1em;
     list-style: none;
     padding: 15px 10px;
 }
-div.menu ul li a {
+#menu ul li a {
     color: cornflowerblue;
     text-decoration: none;
 }
-div.menu:hover {
+#menu ul li a:hover {
     color:fuchsia
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/grid_style.css">
-    <script defer src="JS/script_button.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <header>    
-        <div class="Google"></div>        
-        <div class="logo">
-            <img src="images/popsa.jpg" alt="">
-        </div> 
-        <div class="menu">
-            <div class="cnopka">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul>
-                <li>Меню сайта</li>
-                <li><a href="">Главная страница</a></li>
-                <li><a href="">Линейные уравнения</a></li>
-                <li><a href="">Квадратные уравнения</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <form name="search">
-                <input type="button" value="Random" id="button">
-            </form>
-            <div id="div"></div>
-        </div>
-    </header>
-</body>
-</html>
+
+#menu.cnopka {
+    position: absolute;
+    left: 270 px;
+    top: 20 px;
+    background: #5cacfb;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#menu.cnopka span{
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: grey;
+    margin: 4px;
+}
+
+#menu.cnopka:hover {background: #556270;}
+#menu.cnopka:hover span {background: #fafafa;}
+
