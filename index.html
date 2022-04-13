@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/grid_style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/menu.css">
     <script defer src="JS/script_button.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header>
-        <div class="head"></div>
-        <div class="logo">
-            <img src="images/LOGO.png" alt="">
+    
+        <div id="head">
+            <div class="logo">
+                <img  src="img/LOGO.png" alt="">
+            </div>             
         </div>
-        <div class="menu">Меню</div>
-        
+
+        <div id="menu">
+            <div class="cnopka" onclick="openMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li>Меню сайта</li>
+                <li><a href="/">Главная страница</a></li>
+                <li><a href="/">Линейные уравнения</a></li>
+                <li><a href="/">Квадратные уравнения</a></li>
+            </ul>
+        </div> 
+        <script>
+            function openMenu() {
+                document.getElementById("menu").classList.toggle('active');
+            }
+        </script> 
     </header>
     <main>
         <div class="content">
