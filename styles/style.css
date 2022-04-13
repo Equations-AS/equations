@@ -2,25 +2,37 @@ header {
     display: grid;
     column-gap: 9px;
     row-gap: 9px;
-    grid-template-columns: repeat(35, 50px);
+    grid-template-columns: repeat(71, 20px);
     grid-template-rows: repeat(5, 20px);
 }
 #head {
-    background-image: url(https://64.media.tumblr.com/0da4b337db83dc1d3484bbf3113de25e/tumblr_ofqc8qNHep1rzlq9xo1_1280.gifv);
-    grid-column: 1/35;
+    box-shadow: 0px 0px 0px 2px black;
+    grid-column: 1/67;
     grid-row: 1/6;
-
     display: grid;
     column-gap: 4px;
     row-gap: 4px;
-    grid-template-columns: repeat(10, 80px);
+    grid-template-columns: repeat(71, 20px);
     grid-template-rows: repeat(5, 20px);
 }
 #head .logo {
-    grid-column: 8/9;
+    grid-column: 34/37;
     grid-row: 2/3;
 }
+div.discord {
+    grid-column: 64/66;
+    grid-row: 1/2;
+}
+div.vk {
+    grid-column: 62/64;
+    grid-row: 1/2;
+}
+div.telega {
+    grid-column: 60/62;
+    grid-row: 1/2;
+}
 main {
+    background-color: rgb(240, 240, 240);
     display: grid;
     column-gap: 9px;
     row-gap: 9px;
@@ -32,12 +44,12 @@ div.logo {
     grid-row: 2/3;
 }
 div.menu {
-    background-color: rgb(179, 174, 174);
+    background-color: rgb(255, 255, 255);
     grid-column: 1/2;
     grid-row: 1/2;
 }
 div.content {
-    background-color: rgb(241, 241, 241);
+
     grid-column: 1/33;
     grid-row: 1/30;
 }
