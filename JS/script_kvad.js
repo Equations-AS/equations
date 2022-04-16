@@ -99,8 +99,8 @@ btn.onclick = function() {
         otvet_na.innerHTML = String(otvet);
     }
     else {
-        var otvet1 = Random(-20, -1)
-        var otvet2 = Random(1, 20)  
+        var otvet1 = Random(-8, -1)
+        var otvet2 = Random(1, 8)  
         otvet = `x<sub>1</sub> = ` + otvet1 + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + `x<sub>2</sub> = ` + otvet2
         urovnenie.innerHTML = kvad(otvet1, otvet2);
         otvet_na.innerHTML = String(otvet);
