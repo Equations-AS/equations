@@ -94,8 +94,8 @@ btn.onclick = function() {
     if (on_off == 1) {
         var otvet1 = Random(-40, -1)
         var otvet2 = Random(1, 40)
-        urovnenie.innerHTML = kvad(otvet1, otvet2);
         otvet = `x<sub>1</sub> = ` + otvet1 + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + `x<sub>2</sub> = ` + otvet2
+        urovnenie.innerHTML = kvad(otvet1, otvet2);
         otvet_na.innerHTML = String(otvet);
     }
     else {
