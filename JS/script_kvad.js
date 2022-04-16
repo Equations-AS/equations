@@ -73,4 +73,3 @@ function kvad(otvet1, otvet2) {
 var otvet1 = Random(-20, -1)
 var otvet2 = Random(1, 20)
 
-console.log(kvad(20, -20))
