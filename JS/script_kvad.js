@@ -1,3 +1,6 @@
+var on_off = 0
+var kof
+
 function Random (min, max){ 
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -73,3 +76,31 @@ function kvad(otvet1, otvet2) {
 var otvet1 = Random(-20, -1)
 var otvet2 = Random(1, 20)
 
+const btn = document.getElementById('button');
+const urovnenie = document.getElementById('urovnenie');
+const otvet_na = document.getElementById('otvet_na');
+
+function fun1() {
+    var chbox;
+    chbox=document.getElementById('one');
+    if (chbox.checked) {
+        on_off = 1;
+    }
+    else {
+        on_off = 0;
+    }
+}
+btn.onclick = function() {
+    if (on_off == 1) {
+        var otvet1 = Random(-40, -1)
+        var otvet2 = Random(1, 40)
+        urovnenie.innerHTML = kvad(otvet1, otvet2);
+        otvet_na.innerHTML = otvet1 + otvet2;
+    }
+    else {
+        var otvet1 = Random(-20, -1)
+        var otvet2 = Random(1, 20)
+        urovnenie.innerHTML = kvad(otvet1, otvet2);
+        otvet_na.innerHTML = otvet1 + otvet2;
+    }
+}
