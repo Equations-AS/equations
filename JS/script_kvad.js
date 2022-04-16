@@ -95,12 +95,12 @@ btn.onclick = function() {
         var otvet1 = Random(-40, -1)
         var otvet2 = Random(1, 40)
         urovnenie.innerHTML = kvad(otvet1, otvet2);
-        otvet_na.innerHTML = String(otvet1 otvet2);
+        otvet_na.innerHTML = otvet1 + otvet2;
     }
     else {
         var otvet1 = Random(-20, -1)
         var otvet2 = Random(1, 20)
         urovnenie.innerHTML = kvad(otvet1, otvet2);
-        otvet_na.innerHTML = String(otvet1 otvet2);
+        otvet_na.innerHTML = otvet1 + otvet2;
     }
 }
