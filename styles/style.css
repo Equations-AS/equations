@@ -32,7 +32,7 @@ div.telega {
     grid-row: 1/2;
 }
 main {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(233, 233, 233);
     display: grid;
     column-gap: 9px;
     row-gap: 9px;
@@ -48,12 +48,23 @@ div.menu {
     grid-column: 1/2;
     grid-row: 1/2;
 }
-div.content {
-
-    grid-column: 1/33;
-    grid-row: 1/30;
-}
 div.hi {
     grid-column: 15/35;
     grid-row: 2/3;
+}
+div.urovnenie {
+    background-color: rgb(200, 200, 200);
+    box-shadow: 0px 0px 0px 2px black;
+    grid-column: 15/19;
+    grid-row: 3/4;
+}
+div.otvet_na {
+    background-color: rgb(200, 200, 200);
+    box-shadow: 0px 0px 0px 2px black;
+    grid-column: 15/19;
+    grid-row: 5/6;
+}
+div.knopka {
+    grid-column: 19/21;
+    grid-row: 3/4;
 }
