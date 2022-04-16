@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/menu.css">
-    <script defer src="../JS/script_button.js"></script>
+    <link rel="stylesheet" href="../styles/switch.css">
+    <script defer src="../JS/script_line.js"></script>
     <title>Линейные Уравнения</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_io/favicon-32x32.png">
@@ -15,7 +16,6 @@
 </head>
 <body>
     <header>
-    
         <div id="head">
             <div class="logo">
                 <a href="https://equations-online.ru/"><img  src="../images/LOGO.png" alt=""></a>
@@ -56,12 +56,24 @@
         </script> 
     </header>
     <main>
-        <div class="content">Линейные
-            <form name="search">
-                <input type="button" value="Random" id="button">
-            </form>
-            <div id="div"></div>
+        <div class="switch">
+            <input type="checkbox" id="one" onchange="fun1()">
         </div>
+        <div class="knopka">
+            <input type="button" value="Random" id="button" style="width:100px;height:50px">
+        </div>
+        <div id="urovnenie" class="urovnenie"><p>Уравнение</p></div>
+        <div id="otvet_na" class="otvet_na"><p>Ответ</p></div>
+        <style>
+            .urovnenie {
+             padding: 15px 3px;
+             text-align: center;
+           }
+            .otvet_na {
+             padding: 15px 3px;
+             text-align: center;
+           }
+        </style>
     </main>
 </body>
 </html>
