@@ -55,7 +55,7 @@ div.hi {
 div.urovnenie {
     background-color: rgb(200, 200, 200);
     box-shadow: 0px 0px 0px 2px black;
-    grid-column: 15/19;
+    grid-column: 13/21;
     grid-row: 3/4;
 }
 div.otvet_na {
@@ -65,6 +65,6 @@ div.otvet_na {
     grid-row: 5/6;
 }
 div.knopka {
-    grid-column: 19/21;
+    grid-column: 21/23;
     grid-row: 3/4;
 }
