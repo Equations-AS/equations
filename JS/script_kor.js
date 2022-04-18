@@ -93,12 +93,66 @@ function kor_off (x) {
 
 function kor_on (otvet1, otvet2) {
     // random = Random(0, 2)
-    random = 0
+    random = 1
     if (random == 0) {
         equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">${kvad(otvet1, otvet2)}</span> = 0`
         return equation
     }
-
+    else if (random == 1) {
+        kof = Random(1, 5)
+        if (otvet1 > 0 && otvet2 > 0) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² - ${otvet1 + otvet2}x + ${otvet1 * otvet2 + (kof ** 2)}</span> = ${kof}`
+        }
+        else if (otvet1 < 0 && otvet2 < 0) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² + ${-1 * (otvet1 + otvet2)}x + ${otvet1 * otvet2 + (kof ** 2)}</span> = ${kof}`
+        }
+    
+    
+        else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 > 0)) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² - ${otvet1 + otvet2}x ${otvet1 * otvet2 + (kof ** 2)}</span> = ${kof}`
+        }
+        else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 < 0)) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² + ${-1 * (otvet1 + otvet2)}x ${otvet1 * otvet2 + (kof ** 2)}</span> = ${kof}`
+        }
+    
+    
+        else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 > 0)) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² - ${otvet1 + otvet2}x ${otvet1 * otvet2 + (kof ** 2)}</span> = ${kof}`
+        }
+        else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 < 0)) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² + ${-1 * (otvet1 + otvet2)}x ${otvet1 * otvet2 + (kof ** 2)}</span> = ${kof}`
+        }
+    
+    
+        else if (otvet1 == 0 && otvet2 > 0) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² - ${otvet2}x + ${(kof ** 2)}</span> = ${kof}`
+        }
+        else if (otvet1 == 0 && otvet2 < 0) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² + ${-1 * otvet2}x + ${(kof ** 2)}</span> = ${kof}`
+        }
+        
+        else if (otvet1 > 0 && otvet2 == 0) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² - ${otvet1}x + ${(kof ** 2)}</span> = ${kof}`
+        }
+        else if (otvet1 < 0 && otvet2 == 0) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² + ${-1 * otvet1}x + ${(kof ** 2)}</span> = ${kof}`
+        }
+    
+    
+        else if (otvet1 == 0 && otvet2 == 0) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² + ${kof ** 2}</span> = ${kof}`
+        }
+    
+    
+        else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 >= 0)) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² ${otvet1 * otvet2 + (kof ** 2)}</span> = ${kof}`
+        }
+        else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 <= 0)) {
+            equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² ${otvet1 * otvet2 + (kof ** 2)}</span> = ${kof}`
+        }
+        
+        return equation
+    }
 }
 
 function fun1() {
@@ -113,8 +167,8 @@ function fun1() {
 }
 btn.onclick = function() {
     if (on_off == 1) {
-        var otvet1 = Random(-20, -1)
-        var otvet2 = Random(1, 20)
+        var otvet1 = Random(-20, -6)
+        var otvet2 = Random(6, 20)
         otvet = `x<sub>1</sub> = ` + otvet1 + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + `x<sub>2</sub> = ` + otvet2
         urovnenie.innerHTML = kor_on(otvet1, otvet2);
         otvet_na.innerHTML = String(otvet);
