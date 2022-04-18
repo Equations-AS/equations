@@ -17,6 +17,62 @@ const btn = document.getElementById('button');
 const urovnenie = document.getElementById('urovnenie');
 const otvet_na = document.getElementById('otvet_na');
 
+function kvad(otvet1, otvet2) {
+    let equation = ""
+    if (otvet1 > 0 && otvet2 > 0) {
+        equation = `x² - ${otvet1 + otvet2}x + ${otvet1 * otvet2}`
+    }
+    else if (otvet1 < 0 && otvet2 < 0) {
+        equation = `x² + ${-1 * (otvet1 + otvet2)}x + ${otvet1 * otvet2}`
+    }
+
+
+    else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 > 0)) {
+        equation = `x² - ${otvet1 + otvet2}x - ${-1 * otvet1 * otvet2}`
+    }
+    else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 < 0)) {
+        equation = `x² + ${-1 * (otvet1 + otvet2)}x - ${-1 * otvet1 * otvet2}`
+    }
+
+
+    else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 > 0)) {
+        equation = `x² - ${otvet1 + otvet2}x - ${-1 * otvet1 * otvet2}`
+    }
+    else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 < 0)) {
+        equation = `x² + ${-1 * (otvet1 + otvet2)}x - ${-1 * otvet1 * otvet2}`
+    }
+
+
+    else if (otvet1 == 0 && otvet2 > 0) {
+        equation = `x² - ${otvet2}x`
+    }
+    else if (otvet1 == 0 && otvet2 < 0) {
+        equation = `x² + ${-1 * otvet2}x`
+    }
+    
+    else if (otvet1 > 0 && otvet2 == 0) {
+        equation = `x² - ${otvet1}x`
+    }
+    else if (otvet1 < 0 && otvet2 == 0) {
+        equation = `x² + ${-1 * otvet1}x `
+    }
+
+
+    else if (otvet1 == 0 && otvet2 == 0) {
+        equation = `x²`
+    }
+
+
+    else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 >= 0)) {
+        equation = `x² - ${-1 * otvet1 * otvet2}`
+    }
+    else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 <= 0)) {
+        equation = `x² - ${-1 * otvet1 * otvet2}`
+    }
+    
+    return equation
+}
+
 function kor_off (x) {
     random = Random(0, 1)
     if (random == 0) {
@@ -35,8 +91,14 @@ function kor_off (x) {
     return equation
 }
 
-function kor_on (удачи) {
-    
+function kor_on (otvet1, otvet2) {
+    // random = Random(0, 2)
+    random = 0
+    if (random == 0) {
+        equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">${kvad(otvet1, otvet2)}</span> = 0`
+        return equation
+    }
+
 }
 
 function fun1() {
@@ -51,11 +113,10 @@ function fun1() {
 }
 btn.onclick = function() {
     if (on_off == 1) {
-        var otvet1 = Random(-20, -5)
-        var otvet2 = Random(5, 20)
-        var osnov = Random(2, 20)
+        var otvet1 = Random(-20, -1)
+        var otvet2 = Random(1, 20)
         otvet = `x<sub>1</sub> = ` + otvet1 + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + `x<sub>2</sub> = ` + otvet2
-        urovnenie.innerHTML = log_on(otvet1, otvet2);
+        urovnenie.innerHTML = kor_on(otvet1, otvet2);
         otvet_na.innerHTML = String(otvet);
     }
     else {
