@@ -63,10 +63,10 @@ function kvad(otvet1, otvet2) {
     }
 
 
-    else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 >= 0)) {
+    else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 == 0)) {
         equation = `x² - ${-1 * otvet1 * otvet2}`
     }
-    else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 <= 0)) {
+    else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 == 0)) {
         equation = `x² - ${-1 * otvet1 * otvet2}`
     }
     
@@ -144,10 +144,10 @@ function kor_on (otvet1, otvet2) {
         }
     
     
-        else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 >= 0)) {
+        else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 == 0)) {
             equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² ${otvet1 * otvet2 + (kof ** 2)}</span> = ${kof}`
         }
-        else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 <= 0)) {
+        else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 == 0)) {
             equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² ${otvet1 * otvet2 + (kof ** 2)}</span> = ${kof}`
         }
         
@@ -199,10 +199,10 @@ function kor_on (otvet1, otvet2) {
         }
     
     
-        else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 >= 0)) {
+        else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 == 0)) {
             equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² ${otvet1 * otvet2 + (kof ** 2)}</span> = <span>&#8730;</span><span  style="border-top: 1px solid black">${kof ** 2}</span>`
         }
-        else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 <= 0)) {
+        else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 == 0)) {
             equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² ${otvet1 * otvet2 + (kof ** 2)}</span> = <span>&#8730;</span><span  style="border-top: 1px solid black">${kof ** 2}</span>`
         }
     else if (random == 3) {
@@ -253,10 +253,10 @@ function kor_on (otvet1, otvet2) {
         }
     
     
-        else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 >= 0)) {
+        else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 == 0)) {
             equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² ${otvet1 * otvet2 + (kof ** 2)}</span> = <span>&#8730;</span><span  style="border-top: 1px solid black">${kof ** 2}</span>`
         }
-        else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 <= 0)) {
+        else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 == 0)) {
             equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">x² ${otvet1 * otvet2 + (kof ** 2)}</span> = <span>&#8730;</span><span  style="border-top: 1px solid black">${kof ** 2}</span>`
         }
     return equation
