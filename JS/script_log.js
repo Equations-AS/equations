@@ -84,7 +84,7 @@ function log_off(osnov) {
 }
 
 function log_on(otvet1, otvet2) {
-    random = 4
+    random = Random(0, 4)
     if (random == 0) {
         osnov = Random(2, 20)
         kvad_ur = kvad(otvet1, otvet2)
