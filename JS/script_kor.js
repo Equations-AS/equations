@@ -285,6 +285,6 @@ btn.onclick = function() {
     else {
         var otvet = Random(2, 40)
         urovnenie.innerHTML = kor_off(otvet);
-        otvet_na.innerHTML = otvet
+        otvet_na.innerHTML = `x = ${otvet}`
         }
 }
