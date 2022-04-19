@@ -8,6 +8,7 @@ var otvet2
 var pod_log
 var pod_log1
 var kof
+var kof3
 var kvad_ur
 var on_off = 0
 var osnov
@@ -116,7 +117,7 @@ function step_off(otvet1) {
 }
 
 function step_on(otvet1, otvet2) {
-    random = Random(0, 3)
+    random = Random(0, 2)
     if (random == 0) {
         osnov = Random(2, 20)
         kvad_ur = kvad(otvet1, otvet2)
@@ -126,59 +127,58 @@ function step_on(otvet1, otvet2) {
     }
     else if (random == 1 || random == 2) {
         osnov = Random(2, 20)
-        pod_log1 = Random(1, 24)
-        let equation = ""
+        kof = Random(1, 5)
+        kof3 = Random(2, 5)
         if (otvet1 > 0 && otvet2 > 0) {
-            equation = `${osnov}<sup>x² - ${otvet1 + otvet2}x + ${(otvet1 * otvet2) + pod_log1}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² - ${otvet1 + otvet2}x + ${otvet1 * otvet2 + (kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
         else if (otvet1 < 0 && otvet2 < 0) {
-            equation = `${osnov}<sup>(x² + ${-1 * (otvet1 + otvet2)}x + ${(otvet1 * otvet2) + pod_log1}</sup> = ${osnov}<sup>${pod_log1}</sup>        `
+            equation = `${osnov}<sup>${1 + kof3}x² + ${-1 * (otvet1 + otvet2)}x + ${otvet1 * otvet2 + (kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
+    
+    
         else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 > 0)) {
-            equation = `${osnov}<sup>x² - ${otvet1 + otvet2}x ${pod_log1 + (otvet1 * otvet2)}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² - ${otvet1 + otvet2}x ${otvet1 * otvet2 + (kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
         else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 < 0)) {
-            equation = `${osnov}<sup>x² + ${-1 * (otvet1 + otvet2)}x ${pod_log + (otvet1 * otvet2)}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² + ${-1 * (otvet1 + otvet2)}x ${otvet1 * otvet2 + (kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
-
-
+    
+    
         else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 > 0)) {
-            equation = `${osnov}<sup>x² - ${otvet1 + otvet2}x ${pod_log1 + (otvet1 * otvet2)}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² - ${otvet1 + otvet2}x ${otvet1 * otvet2 + (kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
         else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 < 0)) {
-            equation = `${osnov}<sup>x² + ${-1 * (otvet1 + otvet2)}x ${pod_log1 + (otvet1 * otvet2)}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² + ${-1 * (otvet1 + otvet2)}x ${otvet1 * otvet2 + (kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
+    
+    
         else if (otvet1 == 0 && otvet2 > 0) {
-            equation = `${osnov}<sup>x² - ${otvet2}x + ${pod_log1}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² - ${otvet2}x + ${(kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
         else if (otvet1 == 0 && otvet2 < 0) {
-            equation = `${osnov}<sup>x² + ${-1 * otvet2}x + ${pod_log1}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² + ${-1 * otvet2}x + ${(kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
         
         else if (otvet1 > 0 && otvet2 == 0) {
-            equation = `${osnov}<sup>x² - ${otvet1}x + ${pod_log1}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² - ${otvet1}x + ${(kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
         else if (otvet1 < 0 && otvet2 == 0) {
-            equation = `${osnov}<sup>x² + ${-1 * otvet1}x + ${pod_log1}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² + ${-1 * otvet1}x + ${(kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
+    
+    
         else if (otvet1 == 0 && otvet2 == 0) {
-            equation = `${osnov}<sup>x² + ${pod_log1}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² + ${kof ** 2}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
+    
+    
         else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 == 0)) {
-            equation = `${osnov}<sup>x² ${pod_log1 + (otvet1 * otvet2)}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² ${otvet1 * otvet2 + (kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
         else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 == 0)) {
-            equation = `${osnov}<sup>x² ${pod_log1 + (otvet1 * otvet2)}</sup> = ${osnov}<sup>${pod_log1}</sup>`
+            equation = `${osnov}<sup>${1 + kof3}x² ${otvet1 * otvet2 + (kof ** 2)}</sup> = ${osnov}<sup>${kof3}x² + ${kof ** 2}</sup>`
         }
-        return equation
-    }
-    else if (random == 3) {
-        osnov = Random(2, 20)
-        pod_log1 = Random(1, 100)
-        kof = Random(2, 9)
-        kvad_ur = kvad(otvet1, otvet2)
-        pod_log = `${kof}x² + ${kvad_ur} + ${pod_log1}`
-        equation = `${osnov}<sup>${pod_log}</sup> = ${osnov}<sup>${kof}x² + ${pod_log1}</sup>`
         return equation
     }
 }
