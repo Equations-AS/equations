@@ -53,18 +53,18 @@ function drob_on(otvet1, otvet2, otvet3) {
 
 
     else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 > 0)) {
-        equation1 = `(x² - ${otvet1 + otvet2}x — ${-1 * otvet1 * otvet2})`
+        equation1 = `(x² - ${otvet1 + otvet2}x - ${-1 * otvet1 * otvet2})`
     }
     else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 < 0)) {
-        equation1 = `(x² + ${-1 * (otvet1 + otvet2)}x — ${-1 * otvet1 * otvet2})`
+        equation1 = `(x² + ${-1 * (otvet1 + otvet2)}x - ${-1 * otvet1 * otvet2})`
     }
 
 
     else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 > 0)) {
-        equation1 = `(x² - ${otvet1 + otvet2}x — ${-1 * otvet1 * otvet2})`
+        equation1 = `(x² - ${otvet1 + otvet2}x - ${-1 * otvet1 * otvet2})`
     }
     else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 < 0)) {
-        equation1 = `(x² + ${-1 * (otvet1 + otvet2)}x — ${-1 * otvet1 * otvet2})`
+        equation1 = `(x² + ${-1 * (otvet1 + otvet2)}x - ${-1 * otvet1 * otvet2})`
     }
 
 
