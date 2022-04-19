@@ -8,7 +8,6 @@ var otvet
 var otvet1
 var otvet2
 var kof
-var kof2
 var kof3
 var random
 var ravno
@@ -93,8 +92,7 @@ function kor_off (x) {
 }
 
 function kor_on (otvet1, otvet2) {
-    // random = Random(0, 2)
-    random = 3
+    random = Random(0, 2)
     if (random == 0) {
         equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">${kvad(otvet1, otvet2)}</span> = 0`
         return equation
@@ -209,7 +207,6 @@ function kor_on (otvet1, otvet2) {
     }
     else if (random == 3) {
         kof = Random(1, 5)
-        kof2 = Random(1, 5)
         kof3 = Random(2, 5)
         if (otvet1 > 0 && otvet2 > 0) {
             equation = `<span>&#8730;</span><span  style="border-top: 1px solid black">${1 + kof3}x² - ${otvet1 + otvet2}x + ${otvet1 * otvet2 + (kof ** 2)}</span> = <span>&#8730;</span><span  style="border-top: 1px solid black">${kof3}x² + ${kof ** 2}</span>`
