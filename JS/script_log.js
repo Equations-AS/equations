@@ -56,10 +56,10 @@ function kvad(otvet1, otvet2) {
     else if (otvet1 == 0 && otvet2 == 0) {
         equation = `x²`
     }
-    else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 >= 0)) {
+    else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 == 0)) {
         equation = `x² — ${-1 * otvet1 * otvet2}`
     }
-    else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 <= 0)) {
+    else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 == 0)) {
         equation = `x² — ${-1 * otvet1 * otvet2}`
     }
     return equation
@@ -132,10 +132,10 @@ function log_on(otvet1, otvet2) {
         else if (otvet1 == 0 && otvet2 == 0) {
             equation = `log<sub>${osnov}</sub>(x² + ${pod_log1}) = log<sub>${osnov}</sub>(${pod_log1})`
         }
-        else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 >= 0)) {
+        else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 == 0)) {
             equation = `log<sub>${osnov}</sub>(x² ${pod_log1 + (otvet1 * otvet2)}) = log<sub>${osnov}</sub>(${pod_log1})`
         }
-        else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 <= 0)) {
+        else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 == 0)) {
             equation = `log<sub>${osnov}</sub>(x² ${pod_log1 + (otvet1 * otvet2)}) = log<sub>${osnov}</sub>(${pod_log1})`
         }
         return equation
