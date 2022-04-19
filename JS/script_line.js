@@ -64,9 +64,8 @@ function fun1() {
 btn.onclick = function() {
     if (on_off == 1) {
         var otvet = Random(1, 20)
-        otvet1 = `x = ${otvet1}`
         urovnenie.innerHTML = line_on(otvet);
-        otvet_na.innerHTML = otvet1;
+        otvet_na.innerHTML = `x = ${otvet1}`;
     }
     else {
         var otvet = Random(1, 20)
