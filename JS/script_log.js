@@ -7,6 +7,7 @@ var otvet2
 var pod_log
 var pod_log1
 var kof
+var kof3
 var kvad_ur
 var on_off = 0
 var osnov
