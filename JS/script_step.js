@@ -22,34 +22,34 @@ const otvet_na = document.getElementById('otvet_na');
 function kvad(otvet1, otvet2) {
     let equation = ""
     if (otvet1 > 0 && otvet2 > 0) {
-        equation = `x² — ${otvet1 + otvet2}x + ${otvet1 * otvet2}`
+        equation = `x² - ${otvet1 + otvet2}x + ${otvet1 * otvet2}`
     }
     else if (otvet1 < 0 && otvet2 < 0) {
         equation = `x² + ${-1 * (otvet1 + otvet2)}x + ${otvet1 * otvet2}`
     }
     else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 > 0)) {
-        equation = `x² — ${otvet1 + otvet2}x — ${-1 * otvet1 * otvet2}`
+        equation = `x² - ${otvet1 + otvet2}x - ${-1 * otvet1 * otvet2}`
     }
     else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 < 0)) {
-        equation = `x² + ${-1 * (otvet1 + otvet2)}x — ${-1 * otvet1 * otvet2}`
+        equation = `x² + ${-1 * (otvet1 + otvet2)}x - ${-1 * otvet1 * otvet2}`
     }
 
 
     else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 > 0)) {
-        equation = `x² — ${otvet1 + otvet2}x — ${-1 * otvet1 * otvet2}`
+        equation = `x² - ${otvet1 + otvet2}x - ${-1 * otvet1 * otvet2}`
     }
     else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 < 0)) {
-        equation = `x² + ${-1 * (otvet1 + otvet2)}x — ${-1 * otvet1 * otvet2}`
+        equation = `x² + ${-1 * (otvet1 + otvet2)}x - ${-1 * otvet1 * otvet2}`
     }
     else if (otvet1 == 0 && otvet2 > 0) {
-        equation = `x² — ${otvet2}x`
+        equation = `x² - ${otvet2}x`
     }
     else if (otvet1 == 0 && otvet2 < 0) {
         equation = `x² + ${-1 * otvet2}x`
     }
     
     else if (otvet1 > 0 && otvet2 == 0) {
-        equation = `x² — ${otvet1}x`
+        equation = `x² - ${otvet1}x`
     }
     else if (otvet1 < 0 && otvet2 == 0) {
         equation = `x² + ${-1 * otvet1}x`
@@ -58,10 +58,10 @@ function kvad(otvet1, otvet2) {
         equation = `x²`
     }
     else if ((otvet1 < 0 && otvet2 > 0) && (otvet1 + otvet2 == 0)) {
-        equation = `x² — ${-1 * otvet1 * otvet2}`
+        equation = `x² - ${-1 * otvet1 * otvet2}`
     }
     else if ((otvet1 > 0 && otvet2 < 0) && (otvet1 + otvet2 == 0)) {
-        equation = `x² — ${-1 * otvet1 * otvet2}`
+        equation = `x² - ${-1 * otvet1 * otvet2}`
     }
     return equation
 }
