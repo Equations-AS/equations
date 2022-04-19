@@ -107,10 +107,12 @@ function drob_on(otvet1, otvet2, otvet3) {
     }
 
     equationLast = `${equation1} \n &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp——————— = 0 \n ${equation2}`
+
+    
     if (otvet3 != otvet1 && otvet3 != otvet2) {
         return equationLast
     } else {
-        drob_on(otvet1, otvet2, otvet3 + 1)
+       return drob_on(otvet1, otvet2, otvet3 + 1)
     }
     
 }
@@ -127,20 +129,21 @@ function fun1() {
         on_off = 0;
     }
 }
+
+
 btn.onclick = function() {
     if (on_off == 1) {
         var otvet1 = Random(-20, 20)
         var otvet2 = Random(-20, 20)
         var otvet3 = Random(-20, 20)
-        otvet = `x<sub>1</sub> = ` + otvet1 + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + `x<sub>2</sub> = ` + otvet2
+        otvet = `x<sub>1</sub> = ` + otvet1 + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + `x<sub>2</sub> = ` + otvet2 + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + `x<sub>3</sub> &#8800;` + otvet3
         urovnenie.innerHTML = `<pre>${drob_on(otvet1, otvet2, otvet3)}</pre>`;
         otvet_na.innerHTML = String(otvet);
     }
     else {
         var otvet1 = Random(-20, 20)
         var otvet2 = Random(-20, 20)
-        var otvet3 = Random(-20, 20)
-        otvet = `x<sub>1</sub> = ` + otvet1 + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + `x<sub>2</sub> = ` + otvet2
+        otvet = `x<sub>1</sub> = ` + otvet1 + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + '&nbsp' + `x<sub>2</sub> &#8800; ` + otvet2
         urovnenie.innerHTML = `<pre>${drob_off(otvet1, otvet2)}</pre>`;
         otvet_na.innerHTML = otvet
         }
