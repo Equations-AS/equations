@@ -181,6 +181,6 @@ btn.onclick = function() {
     else {
         var osnov = Random(1, 10)
         urovnenie.innerHTML = log_off(osnov);
-        otvet_na.innerHTML = osnov
+        otvet_na.innerHTML = `x = ${osnov}`
         }
 }
