@@ -219,7 +219,7 @@ btn.onclick = function() {
         otvet_na.innerHTML = String(otvet);
     }
     else {
-        var osnov = Random(1, 10)
+        var osnov = Random(2, 10)
         urovnenie.innerHTML = log_off(osnov);
         otvet_na.innerHTML = `x = ${osnov}`
         }
